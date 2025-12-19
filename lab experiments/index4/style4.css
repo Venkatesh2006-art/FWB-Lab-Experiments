@@ -1,0 +1,91 @@
+/*-------------------------
+   THEME VARIABLES (LIGHT)
+-------------------------- */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #222222;
+  --primary: #4b7bec;
+  --card-bg: #f7f7f7;
+
+  --font-primary: 'Poppins', sans-serif;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 32px;
+}
+
+/* -------------------------
+   DARK THEME
+-------------------------- */
+[data-theme="dark"] {
+  --bg-color: #1e1e1e;
+  --text-color: #f1f1f1;
+  --primary: #4b7bec;
+  --card-bg: #2a2a2a;
+}
+
+/* -------------------------
+   GLOBAL STYLES
+-------------------------- */
+body {
+  margin: 0;
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-primary);
+  font-size: 16px;
+}
+
+/* -------------------------
+   HEADER
+-------------------------- */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--primary);
+  padding: var(--space-md);
+  color: white;
+}
+
+header h1 {
+  margin: 0;
+}
+
+/* -------------------------
+   BUTTON
+-------------------------- */
+.theme-toggle {
+  margin: var(--space-md);
+  padding: var(--space-sm) var(--space-md);
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  opacity: 0.9;
+}
+
+/* -------------------------
+   CONTAINER + CARDS
+-------------------------- */
+.container {
+  padding: var(--space-lg);
+}
+
+.card {
+  padding: var(--space-md);
+  background: var(--card-bg);
+  border-radius: 10px;
+  margin-bottom: var(--space-md);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+  margin-bottom: var(--space-sm);
+}
+
+.card p {
+  line-height: 1.6;
+}

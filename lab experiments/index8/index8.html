@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Showcase</title>
+    <link rel="stylesheet" href="style8.css">
+</head>
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+    
+    <div class="products-container">
+        <!-- Electronics Product (like OOP inheritance) -->
+        <div class="product-card electronics" data-type="electronics">
+            <img src="laptop.jpeg" alt="Laptop">
+            <h3>Laptop Pro</h3>
+            <p class="price">₹99,999</p>
+            <p class="product-detail">Warranty: 2 years</p>
+            <button class="add-cart">Add to Cart</button>
+        </div>
+
+        <!-- Clothing Product (like OOP inheritance) -->
+        <div class="product-card clothing" data-type="clothing">
+            <img src="t shirt.avif" alt="T-Shirt">
+            <h3>Premium T-Shirt</h3>
+            <p class="price">₹1,299</p>
+            <p class="product-detail">Size: M</p>
+            <button class="add-cart">Add to Cart</button>
+        </div>
+
+        <!-- Additional Electronics Product -->
+        <div class="product-card electronics" data-type="electronics">
+            <img src="_iphone_16_.webp" alt="Smartphone">
+            <h3>Smartphone X1</h3>
+            <p class="price">₹49,999</p>
+            <p class="product-detail">Warranty: 1 year</p>
+            <button class="add-cart">Add to Cart</button>
+        </div>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            document.documentElement.dataset.theme = 
+                document.documentElement.dataset.theme === 'dark' ? '' : 'dark';
+        }
+    </script>
+</body>
+</html>

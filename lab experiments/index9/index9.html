@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Experiment 9 – Async API & Layout</title>
+  <link rel="stylesheet" href="style9.css" />
+</head>
+<body>
+  <header>
+    <h1>Travel Explorer – Async API Demo</h1>
+    <div id="header-info">No data loaded</div>
+  </header>
+
+  <div class="layout">
+    <aside>
+      <h2>Filters</h2>
+      <p class="small">
+        This sidebar has fixed width. Main content width is calculated using
+        <code>calc(100% - sidebar)</code>.
+      </p>
+      <p class="small">
+        Try resizing the window to see how the layout adjusts.
+      </p>
+    </aside>
+
+    <main>
+      <section class="controls">
+        <button id="loadTripsBtn">Load Trips (async/await)</button>
+        <button id="loadWeatherBtn">Load Weather (Promise chain)</button>
+        <span class="status" id="statusText">Click a button to load data.</span>
+      </section>
+
+      <section>
+        <h2>Recommended Trips</h2>
+        <div id="tripsContainer" class="card-list"></div>
+      </section>
+
+      <section style="margin-top: 30px;">
+        <h2>Destination Weather</h2>
+        <div id="weatherContainer" class="card-list"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script9.js"></script>
+</body>
+</html>

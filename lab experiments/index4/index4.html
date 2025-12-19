@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Themed Layout</title>
+  <link rel="stylesheet" href="style4.css">
+</head>
+<body>
+
+  <header>
+    <h1>Themed Layout</h1>
+  </header>
+
+  <button class="theme-toggle" onclick="toggleTheme()">Switch Theme</button>
+
+  <div class="container">
+    <div class="card">
+      <h2>Welcome</h2>
+      <p>This layout supports light and dark themes using CSS custom properties.</p>
+    </div>
+
+    <div class="card">
+      <h2>Reusable Styles</h2>
+      <p>Spacing, fonts, and colors are controlled with variables for consistency.</p>
+    </div>
+  </div>
+
+  <script>
+    function toggleTheme() {
+      const body = document.body;
+      if (body.getAttribute("data-theme") === "dark") {
+        body.removeAttribute("data-theme");
+      } else {
+        body.setAttribute("data-theme", "dark");
+      }
+    }
+  </script>
+
+</body>

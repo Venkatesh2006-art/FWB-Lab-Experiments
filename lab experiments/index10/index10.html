@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Experiment 10 – Task Dashboard</title>
+  <link rel="stylesheet" href="style10.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>Task Management Dashboard</h1>
+
+    <!-- Preference: theme -->
+    <div class="preferences">
+      <label>
+        Theme:
+        <select id="themeSelect">
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+        </select>
+      </label>
+
+      <label>
+        Show:
+        <select id="filterSelect">
+          <option value="all">All</option>
+          <option value="pending">Pending</option>
+          <option value="completed">Completed</option>
+        </select>
+      </label>
+    </div>
+  </header>
+
+  <main>
+    <!-- Add / Edit task -->
+    <section class="task-form">
+      <h2>Add / Edit Task</h2>
+      <form id="taskForm">
+        <input
+          type="text"
+          id="taskInput"
+          placeholder="Enter task..."
+          required
+        />
+        <button type="submit">Save Task</button>
+        <button type="button" id="cancelEditBtn" class="secondary" hidden>
+          Cancel Edit
+        </button>
+      </form>
+      <p id="formMessage" class="message"></p>
+    </section>
+
+    <!-- Task list -->
+    <section class="task-list">
+      <h2>Your Tasks</h2>
+      <ul id="taskList"></ul>
+    </section>
+
+    <!-- External data using fetch -->
+    <section class="tips-section">
+      <h2>Productivity Tips (API)</h2>
+      <button id="loadTipsBtn">Load Tips</button>
+      <p id="tipsStatus" class="message"></p>
+      <ul id="tipsList"></ul>
+    </section>
+  </main>
+
+  <script src="java10.js"></script>
+</body>
+</html>

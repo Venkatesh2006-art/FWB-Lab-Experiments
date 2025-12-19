@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration Form</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <header>
+        <h1>Community Center Event Registration</h1>
+        <p>Sign up to join our upcoming community event!</p>
+    </header>
+
+    <main>
+        <form class="registration-form">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="age">Age Group</label>
+                <select id="age" name="age">
+                    <option value="">Select Age Group</option>
+                    <option value="under18">Under 18</option>
+                    <option value="18-30">18-30</option>
+                    <option value="31-50">31-50</option>
+                    <option value="50plus">50+</option>
+                </select>
+            </div>
+
+            <fieldset class="preferences">
+                <legend>Event Preferences</legend>
+                <label><input type="checkbox" name="preferences" value="workshops"> Workshops</label>
+                <label><input type="checkbox" name="preferences" value="seminars"> Seminars</label>
+                <label><input type="checkbox" name="preferences" value="networking"> Networking</label>
+            </fieldset>
+
+            <div class="form-group">
+                <button type="submit">Register</button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
